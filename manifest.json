@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Github Template Picker",
+  "version": "1.0",
+  "description": "This extension allows you to choose template from UI instead of writing it in query params",
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "128": "icon128.png"
+    },
+    "default_title": "Github Template Picker",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.github.com/*", "http://*.github.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
